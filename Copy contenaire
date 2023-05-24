@@ -1,0 +1,43 @@
+// Pour plus de détails sur le format, voir https://aka.ms/devcontainer.json. Pour les options de configuration, consultez le
+
+// LISEZMOI sur : https://github.com/devcontainers/templates/tree/main/src/python
+
+{
+
+	"nom": "Python 3",
+
+	// Ou utilisez un fichier Dockerfile ou Docker Compose. Plus d'infos : https://containers.dev/guide/dockerfile
+
+  // Remarque : Steamship nécessite actuellement Python 3.8
+
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.8",
+
+	// Fonctionnalités à ajouter au conteneur de développement. Plus d'infos : https://containers.dev/features.
+
+	// "caractéristiques": {},
+
+	// Configurez les propriétés spécifiques à l'outil.
+
+	"personnalisations": {
+
+		// Configurez les propriétés spécifiques à VS Code.
+
+		"vscode": {
+
+			"paramètres": {},
+
+			"extensions": [
+
+				"streetsidesoftware.code-correcteur orthographique"
+
+			]
+
+		}
+
+	},
+
+		// Use 'postCreateCommand' to run commands after the container is created.
+
+	"postCreateCommand": "installation pip3 -r exigences.txt"
+
+}
